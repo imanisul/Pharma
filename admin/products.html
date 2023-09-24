@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>products</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/admin_style.css">
+
+</head>
+<body>
+
+
+<!-- add products section starts  -->
+
+<section class="add-products">
+
+   <form action="" method="POST" enctype="multipart/form-data">
+      <h3>add product</h3>
+      <input type="text" required placeholder="enter product name" name="name" maxlength="100" class="box">
+      <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box">
+      <select name="category" class="box" required>
+         <option value="" disabled selected>select category --</option>
+         <option value="main dish">m1</option>
+         <option value="fast food">m2</option>
+         <option value="drinks">m3</option>
+         <option value="desserts">m4</option>
+      </select>
+      <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp" required>
+      <input type="submit" value="add product" name="add_product" class="btn">
+   </form>
+
+</section>
+
+<!-- add products section ends -->
+
+<!-- show products section starts  -->
+
+<section class="show-products" style="padding-top: 0;">
+
+   <div class="box-container">
+
+   <div class="box">
+      <img src="." alt="">
+      <div class="flex">
+         <div class="price"><span>$</span>20<span>/-</span></div>
+         <div class="category">m2</div>
+      </div>
+      <div class="name">medicune 1</div>
+      <div class="flex-btn">
+         <a href="" class="option-btn">update</a>
+         <a href="products.html" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
+      </div>
+   </div>
+   <p class="empty">no products added yet!</p>
+    
+
+   </div>
+
+</section>
+
+<!-- show products section ends -->
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="../js/admin_script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>placed orders</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/admin_style.css">
+
+</head>
+<body>
+
+<?php include '../components/admin_header.php' ?>
+
+<!-- placed orders section starts  -->
+
+<section class="placed-orders">
+
+   <h1 class="heading">placed orders</h1>
+
+   <div class="box-container">
+
+   <div class="box">
+      <p> user id : <span>21bc</span> </p>
+      <p> placed on : <span>12-02-23</span> </p>
+      <p> name : <span>harshit</span> </p>
+      <p> email : <span>ianishar@gmail.com</span> </p>
+      <p> number : <span>6002813464</span> </p>
+      <p> address : <span>sdbjasjdjas</span> </p>
+      <p> total products : <span>2</span> </p>
+      <p> total price : <span>$</span> 2</p>
+      <p> payment method : <span>cod</span> </p>
+      <form action="" method="POST">
+         <input type="hidden" name="order_id" value="12">
+         <select name="payment_status" class="drop-down">
+            <option value="" selected disabled>pending</option>
+            <option value="pending">pending</option>
+            <option value="completed">completed</option>
+         </select>
+         <div class="flex-btn">
+            <input type="submit" value="update" class="btn" name="update_payment">
+            <a href="" class="delete-btn" onclick="return confirm('delete this order?');">delete</a>
+         </div>
+      </form>
+   </div>
+   
+   <p class="empty">no orders placed yet!</p>
+
+   </div>
+
+</section>
+
+<!-- placed orders section ends -->
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="../js/admin_script.js"></script>
+
+</body>
+</html>
